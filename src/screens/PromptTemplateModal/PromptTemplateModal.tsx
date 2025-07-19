@@ -1,12 +1,7 @@
 "use client";
 import React from "react";
 import { templates } from "../../utils/contant";
-
-interface PromptTemplateModalProps {
-    open: boolean;
-    onClose: () => void;
-}
-
+import { PromptTemplateModalProps } from "../../utils/InterfaceData";
 
 const PromptTemplateModal: React.FC<PromptTemplateModalProps> = ({
     open,

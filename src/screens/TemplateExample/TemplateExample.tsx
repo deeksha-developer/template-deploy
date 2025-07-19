@@ -13,6 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PromptTemplateModal from "../PromptTemplateModal/PromptTemplateModal";
 import MobileDashboard from '../TimeLineSlider/MobileDashboard';
 
+
 export const TemplateExample = (): JSX.Element => {
   const [darkMode, setDarkMode] = useState(true);
   const [showGlowCard, setShowGlowCard] = useState(false);
@@ -268,7 +269,7 @@ export const TemplateExample = (): JSX.Element => {
           <img
             className="absolute w-[222px] h-96 top-0 left-0"
             alt="Background"
-            src="/union-branching.png" // replace with actual background for this card
+            src="/union-branching.png" 
           />
 
           <div className="flex flex-col items-start gap-3 relative self-stretch w-full flex-[0_0_auto] mt-auto">
@@ -394,10 +395,19 @@ export const TemplateExample = (): JSX.Element => {
                 </CardContent>
               </Card>
               <img
-                className="absolute w-[368px] h-[368px] top-[200px] left-[146px]"
+                className="absolute animate-spin-slow w-[379px] h-[372px] top-[227px] left-[84px]"
                 alt="Code"
                 src="/code.png"
               />
+              <style>{`
+                @keyframes spin-slow {
+                  0% { transform: rotate(0deg); }
+                  100% { transform: rotate(360deg); }
+                }
+                .animate-spin-slow {
+                  animation: spin-slow 12s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+                }
+              `}</style>
               <div className="w-[578px] items-center gap-8 top-0 left-0 flex flex-col absolute rounded-3xl">
                 <img
                   className="absolute w-[556px] h-[396px] top-0 left-0"
@@ -470,18 +480,13 @@ export const TemplateExample = (): JSX.Element => {
             onClick={() => setShowGlowCard(false)}
           >
             <div onClick={e => e.stopPropagation()}>
-              <GlowCard />
+              <GlowCard onClose={() => setShowGlowCard(false)} />
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-      
-     
-          
-            
+
               < PromptTemplateModal open={showPromptModals} onClose={() => setShowPromptModals(false)}/>
-            
-          
        
       {/* MobileDashboard Modal Overlay */}
       <AnimatePresence>

@@ -13,7 +13,7 @@ import { Card, CardContent } from "../components/ui/glowCommon/card";
 import { cards } from "../utils/contant";
 import { getCardStyle } from "../utils/StyleData";
 
-export const GlowCard = (): JSX.Element => {
+export const GlowCard = ({ onClose }: { onClose?: () => void }): JSX.Element => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [direction, setDirection] = useState(0);
 
@@ -45,7 +45,7 @@ export const GlowCard = (): JSX.Element => {
                     <img
                         className="absolute w-[732px] h-[732px] top-[11px] left-[149px]"
                         alt="Sphere"
-                        src="/sphere.png"
+                        src="/spheres.png"
                     />
 
                     <div className="absolute w-[1024px] h-[900px] top-0 left-[-2px] md:left-[-168px] lg:left-0">
@@ -179,6 +179,7 @@ export const GlowCard = (): JSX.Element => {
                         className="absolute top-[39px] right-[44px] p-0 h-auto w-auto md:top-[39px] md:right-[44px] top-4 right-4 z-50"
                         aria-label="Close"
                         style={{ minWidth: 32, minHeight: 32 }}
+                        onClick={onClose}
                     >
                         <XIcon className="w-[20px] h-[20px] md:w-[26px] md:h-[26px] text-white" />
                     </Button>

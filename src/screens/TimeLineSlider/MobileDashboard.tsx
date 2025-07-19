@@ -1,13 +1,6 @@
 import MobileTimeline from "./MobileTimeline";
 import VerticalTimeline from "./Timeline";
 
-
-const users = [
-  { src: "/user1.png", alt: "User 1" },
-  { src: "/user2.png", alt: "User 2" },
-  { src: "/user3.png", alt: "User 3" },
-];
-
 interface MobileDashboardProps {
   showPromptModal: boolean;
   setShowPromptModal: (open: boolean) => void;

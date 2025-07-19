@@ -56,7 +56,6 @@ const MobileTimeline: React.FC = () => {
 
   return (
     <div className="relative py-8">
-      {/* Full vertical line in background */}
       <div className="absolute left-6 top-0 h-full w-[2px] bg-indigo-500 rounded-full z-0" />
 
       <div
@@ -72,10 +71,7 @@ const MobileTimeline: React.FC = () => {
               key={index}
               className="relative mb-16 flex items-start gap-4"
             >
-              {/* Dot */}
               <div className="w-4 h-4 rounded-full border-[3px] border-indigo-500 bg-white z-10 relative left-[6px] top-[6px]" />
-
-              {/* Card */}
               <motion.div
                 ref={(el:any) => (refs.current[index] = el)}
                 initial={{ opacity: 0, y: 40 }}
