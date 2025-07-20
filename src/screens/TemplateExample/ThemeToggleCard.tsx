@@ -17,9 +17,7 @@ export default function ThemeToggleCard({ darkMode, setDarkMode }: ThemeToggleCa
       }}
     >
       <div className="flex items-center">
-        <span className="mr-2 text-sm" style={{ color: darkMode ? "#fff" : "#191934" }}>
-          {darkMode ? "Dark" : "Light"}
-        </span>
+       
         <button
           onClick={() => setDarkMode(!darkMode)}
           className="w-[70px] h-[36px] flex items-center rounded-full p-1 transition-colors duration-300 border border-[#ffffff1a] bg-[#10092b40] relative focus:outline-none"
