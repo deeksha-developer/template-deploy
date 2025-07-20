@@ -6,8 +6,9 @@ import { GlowCard } from '../GlowCard';
 import { motion, AnimatePresence } from 'framer-motion';
 import PromptTemplateModal from "../PromptTemplateModal/PromptTemplateModal";
 import MobileDashboard from '../TimeLineSlider/MobileDashboard';
-import { getFeatureCards } from "./FeatureCards";
 import React, { useState } from "react"; 
+import { getFeatureCards } from "./getFeatureCards";
+
 
 
 export const TemplateExample = (): JSX.Element => {
