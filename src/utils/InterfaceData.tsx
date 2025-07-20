@@ -11,3 +11,8 @@ export interface PromptTemplateModalProps {
     onClose: () => void;
 }
 
+export interface ThemeToggleCardProps {
+  darkMode: boolean;
+  setDarkMode: (value: boolean) => void;
+}
+

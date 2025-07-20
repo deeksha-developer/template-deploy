@@ -1,9 +1,8 @@
-import React from "react";
 
-interface ThemeToggleCardProps {
-  darkMode: boolean;
-  setDarkMode: (value: boolean) => void;
-}
+import React from "react";
+import { ThemeToggleCardProps } from "../../utils/InterfaceData";
+
+
 
 export default function ThemeToggleCard({ darkMode, setDarkMode }: ThemeToggleCardProps) {
   return (
