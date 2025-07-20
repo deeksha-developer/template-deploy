@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PromptTemplateModal from "../PromptTemplateModal/PromptTemplateModal";
 import MobileDashboard from '../TimeLineSlider/MobileDashboard';
 import { getFeatureCards } from "./FeatureCards";
-import { useState } from "react";
+import React, { useState } from "react"; 
 
 
 export const TemplateExample = (): JSX.Element => {
