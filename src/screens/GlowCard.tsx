@@ -163,7 +163,7 @@ export const GlowCard = ({ onClose }: { onClose?: () => void }): JSX.Element => 
                         onClick={handleNext}
                         variant="ghost"
                         size="icon"
-                        className="absolute top-[352px] right-[34px] p-0 h-auto w-auto md:top-[352px] md:right-[34px] top-[38%] md:top-[50%] right-2 -translate-y-1/2 z-50"
+                        className="absolute top-[352px] right-[34px] p-0 h-auto w-auto md:top-[352px] md:right-[34px] top-[38%] md:top-[40%] right-2 -translate-y-1/2 z-50"
                         aria-label="Next"
                         style={{ minWidth: 40, minHeight: 40 }}
                     >

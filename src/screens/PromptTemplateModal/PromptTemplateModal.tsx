@@ -83,7 +83,7 @@ const PromptTemplateModal: React.FC<PromptTemplateModalProps> = ({
                     </span>
                 </div>
                 <div
-                    className="absolute left-1/2 top-1/2 w-[400px] h-[278px] rounded-2xl px-8 py-6 flex flex-col justify-between shadow-xl"
+                    className="absolute left-1/2 top-1/2 w-[380px] h-[268px] rounded-2xl px-8 py-6 flex flex-col justify-between shadow-xl"
                     style={{
                         background:
                             "linear-gradient(135deg, #693baf 0%, #6d4acb 40%, #7c63d3 100%)",
@@ -116,15 +116,6 @@ const PromptTemplateModal: React.FC<PromptTemplateModalProps> = ({
                                 style={{ zIndex: 2 }}
                             />
                         </div>
-                        <img
-                            className="relative w-[70px] h-[70px] rounded-lg shadow-lg"
-                            alt="Rectangle"
-                            src="/Rectangle 22781.svg"
-                            style={{
-                                background: "rgba(255,255,255,0.08)",
-                                border: "1px solid #6d4acb",
-                            }}
-                        />
                     </div>
 
                     <h2

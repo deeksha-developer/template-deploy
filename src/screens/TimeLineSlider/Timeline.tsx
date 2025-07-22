@@ -77,15 +77,16 @@ export default function VerticalTimeline({ onClose }: VerticalTimelineProps = {}
       <img
         src="/sphere.png"
         alt="Sphere background"
-        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none z-0"
+        className="absolute inset-0 w-screen h-screen object-cover opacity-20 pointer-events-none z-0"
       />
-      <button
-        className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg focus:outline-none"
-        onClick={onClose ? onClose : () => window.history.back()}
-        aria-label="Close"
-      >
-        &times;
-      </button>
+{onClose && (
+  <button
+    className="absolute top-4 right-4 z-50  rounded-full p-2 shadow-xl shadow-black/30"
+    onClick={onClose}
+  >
+    <span className="text-black text-xl text-white">&times;</span>
+  </button>
+)}
       <div className="relative z-10 w-full">
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute left-1/2 transform -translate-x-1/2 w-[4px]  top-0 bottom-0 rounded-full" />
@@ -97,7 +98,7 @@ export default function VerticalTimeline({ onClose }: VerticalTimelineProps = {}
 
           <div
             ref={containerRef}
-            className="relative h-[80vh] overflow-y-auto scroll-smooth"
+            className="relative h-[80vh] overflow-y-auto scroll-smooth scrollbar-none hide-scrollbar"
           >
             {timelineData.map((item, index) => {
               const isActive = index === activeIndex;

@@ -34,14 +34,14 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
       className:
         "border-none w-[264px] h-[412px] items-start justify-end gap-1 px-8 py-7 top-[424px] left-0 overflow-hidden flex flex-col absolute rounded-3xl",
       content: (
-        <CardContent className="p-0 flex flex-col items-start w-full h-full pb-2 pr-4">
+        <CardContent className="p-0 flex flex-col items-start w-full h-full pb-2 ">
           <img
-            className="absolute w-[222px] h-96 top-0 left-0"
+            className="absolute w-[248px] h-[26rem] top-0 left-0"
             alt="Background"
             src="/union-branching.png" 
           />
 
-          <div className="flex flex-col items-start gap-3 relative self-stretch w-full flex-[0_0_auto] mt-auto">
+          <div className="flex flex-col items-start gap-3 relative self-stretch w-full flex-[0_0_auto] mt-[215px]">
 
             <Button className="flex w-[52px] h-[52px] items-center justify-center gap-1.5 p-3 relative rounded-[10000px] border border-solid border-[#ffffff26] -rotate-180 [background:url(..//mask-2.png)_50%_50%_/_cover,radial-gradient(50%_50%_at_50%_-43%,rgba(250,172,113,1)_0%,rgba(255,128,77,1)_100%),linear-gradient(0deg,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0.05)_100%)]">
               <div className="relative w-8 h-8 mt-[-2.00px] mb-[-2.00px] ml-[-2.00px] mr-[-2.00px] -rotate-180">
@@ -82,7 +82,7 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
           >
             <ThemeToggleCard darkMode={darkMode} setDarkMode={setDarkMode} />
             <Card
-              className="w-full max-w-xs md:w-[262px] md:h-[211px] flex flex-col items-center justify-center gap-6 pt-[34px] pb-8 px-8 md:absolute md:top-[185px] md:left-[648px] border border-solid border-[#ffffff0d] rounded-3xl"
+              className="w-full max-w-xs md:w-[262px] md:h-[211px] flex flex-col items-center justify-center gap-6 pt-[34px] pb-8 px-8 md:absolute md:top-[185px] md:left-[585px] border border-solid border-[#ffffff0d] rounded-3xl"
               style={{
                 background: darkMode
                   ? `radial-gradient(83.95% 102.56% at -41% 110%, rgba(127,139,210,0.3) 0%, rgba(89,106,197,0) 100%), linear-gradient(0deg, rgba(25,25,52,1), rgba(25,25,52,1))`
@@ -95,29 +95,36 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
                     ?.content
                 }
               </CardContent>
+             
             </Card>
-            <div className="relative w-full max-w-full md:absolute md:w-[846px] md:h-[878px] md:top-1.5 md:left-0 flex flex-col gap-6">
-              <img
-                className={`absolute w-[200px] h-[200px] md:w-[321px] md:h-[321px] top-[150px] left-[10vw] md:top-[275px] md:left-[149px] ${darkMode ? 'filter brightness-75' : ''}`}
-                alt="Blur"
-                src="/blur.png"
-              />
-              
+              <Card className="w-[262px] h-[415px] items-center justify-between pt-7 pb-6 px-8 top-[429px] left-[584px] border border-solid border-[#ffffff0d] bg-[#191934] bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_100%)] flex flex-col absolute rounded-3xl overflow-hidden">
+                <CardContent className="p-0 flex flex-col items-center justify-between w-full h-full">
+                  {
+                    featureCards.find((card) => card.id === "prompt-service")
+                      ?.content
+                  }
+                </CardContent>
+              </Card>
+            <div className="relative w-full max-w-full md:absolute md:w-[846px] md:h-[878px] md:top-1.5 md:left-0 flex flex-col">
+
+             
+
               <img
                 className={`absolute w-[180px] h-[180px] md:w-[276px]  md:h-[269px]  top-[180px] left-[20vw] md:top-[287px] md:left-[136px] ${darkMode ? 'filter brightness-75' : ''}`}
                 alt="Sphere"
                 src="/sphere.png"
               />
-              <Card className="border-none w-[264px] h-[412px] items-start justify-end gap-1 px-8 py-7 top-[422px] left-[336px] overflow-hidden flex flex-col absolute rounded-3xl">
-                <CardContent className="p-0 flex flex-col items-start w-full h-full pb-2 pr-4">
+
+              <Card className="border-none w-[264px] h-[429px] items-start justify-end gap-1 px-8 py-7 top-[422px] left-[307px] overflow-hidden flex flex-col absolute rounded-3xl">
+                <CardContent className="p-0 flex flex-col items-start w-full h-full pb-2 ">
                   <img
-                    className="absolute w-[222px] h-96 top-0 left-0"
+                    className="absolute w-[248px] h-[26rem] top-0 left-0"
                     alt="Group"
                     src="/group-1.png"
                   />
                   <div className="flex flex-col items-start gap-3 relative self-stretch w-full flex-[0_0_auto] mt-auto">
                     <img
-                      className="absolute w-[91px] h-[66px] -top-1.5 -left-8"
+                      className="absolute w-[121px] h-[66px] -top-1.5 -left-[4rem]"
                       alt="Union"
                       src="/union-1.svg"
                     />
@@ -156,46 +163,47 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
                   }
                 </CardContent>
               </Card>
-              <Card className="w-[262px] h-[412px] items-center justify-between pt-7 pb-6 px-8 top-[418px] left-[584px] border border-solid border-[#ffffff0d] bg-[#191934] bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_100%)] flex flex-col absolute rounded-3xl overflow-hidden">
-                <CardContent className="p-0 flex flex-col items-center justify-between w-full h-full">
-                  {
-                    featureCards.find((card) => card.id === "prompt-service")
-                      ?.content
-                  }
-                </CardContent>
-              </Card>
-              <img
-                className="absolute animate-spin-slow w-[379px] h-[372px] top-[227px] left-[84px]"
-                alt="Code"
-                src="/code.png"
-              />
-              <style>{`
-                @keyframes spin-slow {
-                  0% { transform: rotate(0deg); }
-                  100% { transform: rotate(360deg); }
-                }
-                .animate-spin-slow {
-                  animation: spin-slow 12s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-                }
-              `}</style>
+           
+       <div className="absolute top-[47%] left-[33%] transform -translate-x-1/2 -translate-y-1/2 z-10">
+  <img
+    className="animate-half-rotate w-[388px] h-[406px]"
+    alt="Code"
+    src="/code.png"
+  />
+<style>{`
+    @keyframes half-rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(20deg);
+      }
+    }
+
+    .animate-half-rotate {
+      animation: half-rotate 6s ease-in-out infinite alternate;
+    }
+  `}</style>
+</div>
               <div className="w-[578px] items-center gap-8 top-0 left-0 flex flex-col absolute rounded-3xl">
                 <img
                   className="absolute w-[556px] h-[396px] top-0 left-0"
                   alt="Bg"
                   src="/templateai.png"
                 />
-                <h3 className={`relative w-[452px] flex-[0_0_auto] text-6xl text-center font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Template AI</h3>
-                <img
+                <h3 className={`relative w-[452px] flex-[0_0_auto] text-6xl text-center font-semibold mt-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Template AI</h3>
+                     {/*<img
                   className="relative w-[100px] h-[100px]"
                   alt="Rectangle"
                   src="/rectangle-22782.svg"
-                />
+                />*/}
                 {/* <img className="relative w-[100px] h-[100px]" alt="Frame" /> */}
               </div>
             </div>
           </div>
-          <Card className="w-[262px] h-[396px] items-start justify-between p-8 top-2 md:top-6 left-[0rem] md:left-8 border border-solid border-[#ffffff0d] bg-[#191934] bg-[radial-gradient(120%_100%_at_100%_100%,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_100%)] block md:flex flex-col absolute rounded-3xl overflow-hidden"
-            style={{ background: darkMode ? '#03061c' : '#f5f5fa' }}>
+          <Card className="w-[262px] h-[396px] items-start justify-between p-8 top-2 md:top-[2.3rem] left-[0rem] md:left-8 border border-solid border-[#ffffff0d] bg-[#191934] bg-[radial-gradient(120%_100%_at_100%_100%,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_100%)] block md:flex flex-col absolute rounded-3xl overflow-hidden"
+            style={{ background: darkMode ? `radial-gradient(83.95% 102.56% at 213% -151%, rgba(127,139,210,0.3) 0%, rgba(89,106,197,0) 100%),
+      linear-gradient(0deg, rgba(25,25,52,1) 0%, rgba(25,25,52,1) 100%)` : '#f5f5fa' }}>
             <CardContent className="p-0 flex flex-col items-start justify-between w-full h-full"
             >
               {
@@ -206,7 +214,7 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
           </Card>
 
           <Card
-            className="w-[262px] h-[220px] block md:flex flex-col items-center justify-center gap-5 pt-[34px] pb-[30px] px-8 absolute top-[438px] md:top-[468px]  left-[0rem] md:left-8 border border-solid border-[#ffffff0d] rounded-3xl "
+            className="w-[262px] h-[220px] block md:flex flex-col items-center justify-center gap-5 pt-[34px] pb-[30px] px-8 absolute top-[438px] md:top-[464px]  left-[0rem] md:left-8 border border-solid border-[#ffffff0d] rounded-3xl "
             style={{
               background: `
       radial-gradient(83.95% 102.56% at 116.48% -20.51%, rgba(127,139,210,0.3) 0%, rgba(89,106,197,0) 100%),
@@ -221,7 +229,7 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
           </Card>
 
           <Card
-            className="w-[262px] h-[164px] block md:flex flex-col items-start justify-center p-8 absolute top-[720px] left-[0rem] md:left-8 border border-solid border-[#ffffff0d] rounded-3xl"
+            className="w-[262px] h-[164px] block md:flex flex-col items-start justify-center p-8 absolute top-[709px] left-[0rem] md:left-8 border border-solid border-[#ffffff0d] rounded-3xl"
             style={{
               background:  darkMode ?` 
       radial-gradient(83.95% 102.56% at 213% -151%, rgba(127,139,210,0.3) 0%, rgba(89,106,197,0) 100%),
@@ -236,6 +244,7 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
               }
             </CardContent>
           </Card>
+         
         </div>
   
                   
@@ -288,6 +297,7 @@ const featureCards = getFeatureCards(darkMode, setShowTimelineModal);
                 setShowTimelineModal={setShowTimelineModal}
                 showPromptModal={showPromptModal}
                 setShowPromptModal={setShowPromptModal}
+                onClose={() => setShowTimelineModal(false)}
               />
             </div>
           </motion.div>

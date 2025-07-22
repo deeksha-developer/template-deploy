@@ -63,14 +63,14 @@ export const getFeatureCards = (darkMode: boolean, setShowTimelineModal: (val: b
                   />
                   <AvatarFallback>U1</AvatarFallback>
                 </Avatar>
-                <div className="flex items-center gap-1 px-4 py-[17px] overflow-hidden border-[#16172d] [background:radial-gradient(50%_50%_at_-246%_286%,rgba(253,130,64,1)_0%,rgba(255,255,255,1)_100%)] w-[62px] h-[62px] relative mt-[-3.00px] mb-[-3.00px] -ml-3 rounded-full border-[3px] border-solid">
+                <div className="flex items-center gap-1 overflow-hidden border-[#16172d]  w-[62px] h-[62px] relative  -ml-3 rounded-full ">
                   <img
-                    className="relative w-[49.97px] h-[42.16px] mt-[-3.16px] mb-[-11.00px] ml-[-12.98px] mr-[-6.98px]"
+                    className="relative w-[149px] h-[142px]   mr-[-6.98px]"
                     alt="Star"
-                    src="/star.png"
+                    src="/starCircle.svg"
                   />
                 </div>
-                <Avatar className="mr-[-3.00px] border-[#15172c] w-[62px] h-[62px] relative mt-[-3.00px] mb-[-3.00px] -ml-3 rounded-full border-[3px] border-solid">
+                <Avatar className="mr-[-3.00px] border-[#15172c] w-[62px] h-[62px] relative mt-[-3.00px] mb-[-3.00px] -ml-3 rounded-full border-[1px] border-solid">
                   <AvatarImage
                     src="/circle-1.png"
                     alt="User avatar"
